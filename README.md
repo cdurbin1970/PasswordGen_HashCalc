@@ -1,5 +1,8 @@
 # PasswordGen_HashCalc
 Utility to generate passwords and to compute hashes on files and text.
+
+This is written in C# and .NET 4.5.2 using VS 2015
+
 This utility has the ability to generate variable length passwords using several different character sets:
 
 PASSWORD_LCASE "abcdefgijkmnopqrstwxyz"<br/>
