@@ -12,6 +12,7 @@ namespace PasswordGen_HashCalc {
         private static string PASSWORD_UCASE = "ABCDEFGHJKLMNPQRSTWXYZ";
         private static string PASSWORD_NUMERIC = "23456789";
         private static string PASSWORD_SPECIAL = "*$-+?_&=!%{}/";
+        private static string PASSWORD_ADDITIONAL = "IO10";
         private static string PASSWORD_HEX_LCASE = "abcdef0123456789";
         private static string PASSWORD_HEX_UCASE = "ABCDEF0123456789";
 
@@ -143,8 +144,8 @@ namespace PasswordGen_HashCalc {
         // Password Tab functions
 
         private void buGeneratePasswords_Click(object sender, EventArgs e) {
-            if (!cbUpper.Checked && !cbLower.Checked && !cbNumeric.Checked && !cbSpecial.Checked && !cbHexUpper.Checked && !cbHexLower.Checked) {
-                MessageBox.Show("You must include one of the 6 character sets!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            if (!cbUpper.Checked && !cbLower.Checked && !cbNumeric.Checked && !cbSpecial.Checked && !cbAdditional.Checked && !cbHexUpper.Checked && !cbHexLower.Checked) {
+                MessageBox.Show("You must include one of the character sets!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             if (tbMaximumLength.Text == "" || tbMinimumLength.Text == "" || tbNumberofPasswords.Text == "") {
@@ -157,7 +158,7 @@ namespace PasswordGen_HashCalc {
             }
             lbPasswordList.Items.Clear();
             for (int i = 0; i < Convert.ToInt16(tbNumberofPasswords.Text); i++)
-                lbPasswordList.Items.Add(generatePasswords(Convert.ToInt16(tbMinimumLength.Text), Convert.ToInt16(tbMaximumLength.Text), cbUpper.Checked, cbLower.Checked, cbNumeric.Checked, cbSpecial.Checked, cbHexUpper.Checked, cbHexLower.Checked));
+                lbPasswordList.Items.Add(generatePasswords(Convert.ToInt16(tbMinimumLength.Text), Convert.ToInt16(tbMaximumLength.Text), cbUpper.Checked, cbLower.Checked, cbNumeric.Checked, cbSpecial.Checked,cbAdditional.Checked, cbHexUpper.Checked, cbHexLower.Checked));
         }
 
         private void copyToolStripMenuItem_Click(object sender, EventArgs e) {
@@ -190,7 +191,7 @@ namespace PasswordGen_HashCalc {
             lbPasswordList.Items.Clear();
         }
 
-        public static string generatePasswords(int minLength, int maxLength, bool upper, bool lower, bool numeric, bool special, bool hexu, bool hexl) {
+        public static string generatePasswords(int minLength, int maxLength, bool upper, bool lower, bool numeric, bool special, bool additional, bool hexu, bool hexl) {
             // Make sure that input parameters are valid.
             if (minLength <= 0 || maxLength <= 0 || minLength > maxLength)
                 return null;
@@ -207,6 +208,9 @@ namespace PasswordGen_HashCalc {
             }
             if (special) {
                 characters = characters + PASSWORD_SPECIAL;
+            }
+            if (additional) {
+                characters = characters + PASSWORD_ADDITIONAL;
             }
             if (hexu) {
                 characters = characters + PASSWORD_HEX_UCASE;

@@ -49,6 +49,8 @@
             this.tbSHA256 = new System.Windows.Forms.TextBox();
             this.cbSHA256 = new System.Windows.Forms.CheckBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.cbHexLower = new System.Windows.Forms.CheckBox();
+            this.cbHexUpper = new System.Windows.Forms.CheckBox();
             this.cbSpecial = new System.Windows.Forms.CheckBox();
             this.cbNumeric = new System.Windows.Forms.CheckBox();
             this.cbLower = new System.Windows.Forms.CheckBox();
@@ -67,8 +69,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.cbHexUpper = new System.Windows.Forms.CheckBox();
-            this.cbHexLower = new System.Windows.Forms.CheckBox();
+            this.cbAdditional = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -306,6 +307,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.cbAdditional);
             this.tabPage2.Controls.Add(this.cbHexLower);
             this.tabPage2.Controls.Add(this.cbHexUpper);
             this.tabPage2.Controls.Add(this.cbSpecial);
@@ -327,6 +329,26 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Password Generator";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // cbHexLower
+            // 
+            this.cbHexLower.AutoSize = true;
+            this.cbHexLower.Location = new System.Drawing.Point(715, 31);
+            this.cbHexLower.Name = "cbHexLower";
+            this.cbHexLower.Size = new System.Drawing.Size(104, 17);
+            this.cbHexLower.TabIndex = 13;
+            this.cbHexLower.Text = "Hex Lower Case";
+            this.cbHexLower.UseVisualStyleBackColor = true;
+            // 
+            // cbHexUpper
+            // 
+            this.cbHexUpper.AutoSize = true;
+            this.cbHexUpper.Location = new System.Drawing.Point(715, 13);
+            this.cbHexUpper.Name = "cbHexUpper";
+            this.cbHexUpper.Size = new System.Drawing.Size(104, 17);
+            this.cbHexUpper.TabIndex = 12;
+            this.cbHexUpper.Text = "Hex Upper Case";
+            this.cbHexUpper.UseVisualStyleBackColor = true;
             // 
             // cbSpecial
             // 
@@ -494,25 +516,15 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Minimum Length:";
             // 
-            // cbHexUpper
+            // cbAdditional
             // 
-            this.cbHexUpper.AutoSize = true;
-            this.cbHexUpper.Location = new System.Drawing.Point(636, 13);
-            this.cbHexUpper.Name = "cbHexUpper";
-            this.cbHexUpper.Size = new System.Drawing.Size(104, 17);
-            this.cbHexUpper.TabIndex = 12;
-            this.cbHexUpper.Text = "Hex Upper Case";
-            this.cbHexUpper.UseVisualStyleBackColor = true;
-            // 
-            // cbHexLower
-            // 
-            this.cbHexLower.AutoSize = true;
-            this.cbHexLower.Location = new System.Drawing.Point(636, 32);
-            this.cbHexLower.Name = "cbHexLower";
-            this.cbHexLower.Size = new System.Drawing.Size(104, 17);
-            this.cbHexLower.TabIndex = 13;
-            this.cbHexLower.Text = "Hex Lower Case";
-            this.cbHexLower.UseVisualStyleBackColor = true;
+            this.cbAdditional.AutoSize = true;
+            this.cbAdditional.Location = new System.Drawing.Point(637, 13);
+            this.cbAdditional.Name = "cbAdditional";
+            this.cbAdditional.Size = new System.Drawing.Size(72, 17);
+            this.cbAdditional.TabIndex = 14;
+            this.cbAdditional.Text = "Additional";
+            this.cbAdditional.UseVisualStyleBackColor = true;
             // 
             // frMain
             // 
@@ -574,6 +586,7 @@
         private System.Windows.Forms.ToolTip toolTip;
         private System.Windows.Forms.CheckBox cbHexLower;
         private System.Windows.Forms.CheckBox cbHexUpper;
+        private System.Windows.Forms.CheckBox cbAdditional;
     }
 }
 
