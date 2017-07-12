@@ -49,6 +49,7 @@
             this.tbSHA256 = new System.Windows.Forms.TextBox();
             this.cbSHA256 = new System.Windows.Forms.CheckBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.cbAdditional = new System.Windows.Forms.CheckBox();
             this.cbHexLower = new System.Windows.Forms.CheckBox();
             this.cbHexUpper = new System.Windows.Forms.CheckBox();
             this.cbSpecial = new System.Windows.Forms.CheckBox();
@@ -69,7 +70,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.cbAdditional = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -165,7 +165,7 @@
             this.buCalculate.Size = new System.Drawing.Size(24, 23);
             this.buCalculate.TabIndex = 3;
             this.buCalculate.UseVisualStyleBackColor = true;
-            this.buCalculate.Click += new System.EventHandler(this.buGeneratePasswords_Click);
+            this.buCalculate.Click += new System.EventHandler(this.buCalculate_Click);
             // 
             // buBrowsePath
             // 
@@ -329,6 +329,16 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Password Generator";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // cbAdditional
+            // 
+            this.cbAdditional.AutoSize = true;
+            this.cbAdditional.Location = new System.Drawing.Point(637, 13);
+            this.cbAdditional.Name = "cbAdditional";
+            this.cbAdditional.Size = new System.Drawing.Size(72, 17);
+            this.cbAdditional.TabIndex = 14;
+            this.cbAdditional.Text = "Additional";
+            this.cbAdditional.UseVisualStyleBackColor = true;
             // 
             // cbHexLower
             // 
@@ -515,16 +525,6 @@
             this.label3.Size = new System.Drawing.Size(87, 13);
             this.label3.TabIndex = 0;
             this.label3.Text = "Minimum Length:";
-            // 
-            // cbAdditional
-            // 
-            this.cbAdditional.AutoSize = true;
-            this.cbAdditional.Location = new System.Drawing.Point(637, 13);
-            this.cbAdditional.Name = "cbAdditional";
-            this.cbAdditional.Size = new System.Drawing.Size(72, 17);
-            this.cbAdditional.TabIndex = 14;
-            this.cbAdditional.Text = "Additional";
-            this.cbAdditional.UseVisualStyleBackColor = true;
             // 
             // frMain
             // 

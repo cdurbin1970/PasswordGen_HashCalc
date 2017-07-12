@@ -37,7 +37,7 @@ namespace PasswordGen_HashCalc {
         }
 
         private void buCalculate_Click(object sender, EventArgs e) {
-
+            checkHash();
         }
 
         public void checkHash() {
