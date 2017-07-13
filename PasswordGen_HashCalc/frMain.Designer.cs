@@ -32,6 +32,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frMain));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tbRipeMD256 = new System.Windows.Forms.TextBox();
+            this.cbRipeMD256 = new System.Windows.Forms.CheckBox();
+            this.tbRipeMD160 = new System.Windows.Forms.TextBox();
+            this.cbRipeMD160 = new System.Windows.Forms.CheckBox();
+            this.tbRipeMD128 = new System.Windows.Forms.TextBox();
+            this.cbRipeMD128 = new System.Windows.Forms.CheckBox();
+            this.tbGost = new System.Windows.Forms.TextBox();
+            this.cbGost = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
             this.tbText = new System.Windows.Forms.TextBox();
             this.tbPath = new System.Windows.Forms.TextBox();
@@ -70,6 +78,12 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.tbRipeMD320 = new System.Windows.Forms.TextBox();
+            this.cbRipeMD320 = new System.Windows.Forms.CheckBox();
+            this.tbTiger = new System.Windows.Forms.TextBox();
+            this.cbTiger = new System.Windows.Forms.CheckBox();
+            this.tbWhirlpool = new System.Windows.Forms.TextBox();
+            this.cbWhirlpool = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -86,11 +100,25 @@
             this.tabControl1.Location = new System.Drawing.Point(9, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(913, 271);
+            this.tabControl1.Size = new System.Drawing.Size(913, 433);
             this.tabControl1.TabIndex = 18;
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.tbWhirlpool);
+            this.tabPage1.Controls.Add(this.cbWhirlpool);
+            this.tabPage1.Controls.Add(this.tbTiger);
+            this.tabPage1.Controls.Add(this.cbTiger);
+            this.tabPage1.Controls.Add(this.tbRipeMD320);
+            this.tabPage1.Controls.Add(this.cbRipeMD320);
+            this.tabPage1.Controls.Add(this.tbRipeMD256);
+            this.tabPage1.Controls.Add(this.cbRipeMD256);
+            this.tabPage1.Controls.Add(this.tbRipeMD160);
+            this.tabPage1.Controls.Add(this.cbRipeMD160);
+            this.tabPage1.Controls.Add(this.tbRipeMD128);
+            this.tabPage1.Controls.Add(this.cbRipeMD128);
+            this.tabPage1.Controls.Add(this.tbGost);
+            this.tabPage1.Controls.Add(this.cbGost);
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.tbText);
             this.tabPage1.Controls.Add(this.tbPath);
@@ -110,10 +138,102 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(905, 245);
+            this.tabPage1.Size = new System.Drawing.Size(905, 407);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Text & File Hash";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tbRipeMD256
+            // 
+            this.tbRipeMD256.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbRipeMD256.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbRipeMD256.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbRipeMD256.Location = new System.Drawing.Point(106, 252);
+            this.tbRipeMD256.Name = "tbRipeMD256";
+            this.tbRipeMD256.ReadOnly = true;
+            this.tbRipeMD256.Size = new System.Drawing.Size(789, 20);
+            this.tbRipeMD256.TabIndex = 24;
+            this.tbRipeMD256.TabStop = false;
+            // 
+            // cbRipeMD256
+            // 
+            this.cbRipeMD256.AutoSize = true;
+            this.cbRipeMD256.Location = new System.Drawing.Point(9, 253);
+            this.cbRipeMD256.Name = "cbRipeMD256";
+            this.cbRipeMD256.Size = new System.Drawing.Size(83, 17);
+            this.cbRipeMD256.TabIndex = 23;
+            this.cbRipeMD256.Text = "RipeMD256";
+            this.cbRipeMD256.UseVisualStyleBackColor = true;
+            // 
+            // tbRipeMD160
+            // 
+            this.tbRipeMD160.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbRipeMD160.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbRipeMD160.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbRipeMD160.Location = new System.Drawing.Point(106, 226);
+            this.tbRipeMD160.Name = "tbRipeMD160";
+            this.tbRipeMD160.ReadOnly = true;
+            this.tbRipeMD160.Size = new System.Drawing.Size(789, 20);
+            this.tbRipeMD160.TabIndex = 22;
+            this.tbRipeMD160.TabStop = false;
+            // 
+            // cbRipeMD160
+            // 
+            this.cbRipeMD160.AutoSize = true;
+            this.cbRipeMD160.Location = new System.Drawing.Point(9, 227);
+            this.cbRipeMD160.Name = "cbRipeMD160";
+            this.cbRipeMD160.Size = new System.Drawing.Size(83, 17);
+            this.cbRipeMD160.TabIndex = 21;
+            this.cbRipeMD160.Text = "RipeMD160";
+            this.cbRipeMD160.UseVisualStyleBackColor = true;
+            // 
+            // tbRipeMD128
+            // 
+            this.tbRipeMD128.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbRipeMD128.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbRipeMD128.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbRipeMD128.Location = new System.Drawing.Point(106, 200);
+            this.tbRipeMD128.Name = "tbRipeMD128";
+            this.tbRipeMD128.ReadOnly = true;
+            this.tbRipeMD128.Size = new System.Drawing.Size(789, 20);
+            this.tbRipeMD128.TabIndex = 20;
+            this.tbRipeMD128.TabStop = false;
+            // 
+            // cbRipeMD128
+            // 
+            this.cbRipeMD128.AutoSize = true;
+            this.cbRipeMD128.Location = new System.Drawing.Point(9, 201);
+            this.cbRipeMD128.Name = "cbRipeMD128";
+            this.cbRipeMD128.Size = new System.Drawing.Size(83, 17);
+            this.cbRipeMD128.TabIndex = 19;
+            this.cbRipeMD128.Text = "RipeMD128";
+            this.cbRipeMD128.UseVisualStyleBackColor = true;
+            // 
+            // tbGost
+            // 
+            this.tbGost.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbGost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbGost.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbGost.Location = new System.Drawing.Point(106, 174);
+            this.tbGost.Name = "tbGost";
+            this.tbGost.ReadOnly = true;
+            this.tbGost.Size = new System.Drawing.Size(789, 20);
+            this.tbGost.TabIndex = 18;
+            this.tbGost.TabStop = false;
+            // 
+            // cbGost
+            // 
+            this.cbGost.AutoSize = true;
+            this.cbGost.Location = new System.Drawing.Point(9, 175);
+            this.cbGost.Name = "cbGost";
+            this.cbGost.Size = new System.Drawing.Size(75, 17);
+            this.cbGost.TabIndex = 17;
+            this.cbGost.Text = "Gost 3411";
+            this.cbGost.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -183,7 +303,7 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 190);
+            this.label2.Location = new System.Drawing.Point(6, 360);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(264, 13);
             this.label2.TabIndex = 12;
@@ -200,7 +320,6 @@
             this.cbMD5.TabIndex = 4;
             this.cbMD5.Text = "MD5";
             this.cbMD5.UseVisualStyleBackColor = true;
-            this.cbMD5.CheckedChanged += new System.EventHandler(this.cbMD5_CheckedChanged);
             // 
             // tbCheck
             // 
@@ -208,11 +327,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbCheck.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbCheck.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCheck.Location = new System.Drawing.Point(8, 206);
+            this.tbCheck.Location = new System.Drawing.Point(8, 376);
             this.tbCheck.Name = "tbCheck";
             this.tbCheck.Size = new System.Drawing.Size(887, 20);
             this.tbCheck.TabIndex = 8;
-            this.tbCheck.TextChanged += new System.EventHandler(this.tbCheck_TextChanged);
             // 
             // tbMD5
             // 
@@ -220,10 +338,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbMD5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbMD5.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbMD5.Location = new System.Drawing.Point(94, 70);
+            this.tbMD5.Location = new System.Drawing.Point(106, 70);
             this.tbMD5.Name = "tbMD5";
             this.tbMD5.ReadOnly = true;
-            this.tbMD5.Size = new System.Drawing.Size(801, 20);
+            this.tbMD5.Size = new System.Drawing.Size(789, 20);
             this.tbMD5.TabIndex = 4;
             this.tbMD5.TabStop = false;
             // 
@@ -233,10 +351,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbSHA512.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbSHA512.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbSHA512.Location = new System.Drawing.Point(94, 148);
+            this.tbSHA512.Location = new System.Drawing.Point(106, 148);
             this.tbSHA512.Name = "tbSHA512";
             this.tbSHA512.ReadOnly = true;
-            this.tbSHA512.Size = new System.Drawing.Size(801, 20);
+            this.tbSHA512.Size = new System.Drawing.Size(789, 20);
             this.tbSHA512.TabIndex = 10;
             this.tbSHA512.TabStop = false;
             // 
@@ -245,26 +363,24 @@
             this.cbSHA1.AutoSize = true;
             this.cbSHA1.Checked = true;
             this.cbSHA1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbSHA1.Location = new System.Drawing.Point(8, 99);
+            this.cbSHA1.Location = new System.Drawing.Point(8, 98);
             this.cbSHA1.Name = "cbSHA1";
             this.cbSHA1.Size = new System.Drawing.Size(54, 17);
             this.cbSHA1.TabIndex = 5;
             this.cbSHA1.Text = "SHA1";
             this.cbSHA1.UseVisualStyleBackColor = true;
-            this.cbSHA1.CheckedChanged += new System.EventHandler(this.cbSHA1_CheckedChanged);
             // 
             // cbSHA512
             // 
             this.cbSHA512.AutoSize = true;
             this.cbSHA512.Checked = true;
             this.cbSHA512.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbSHA512.Location = new System.Drawing.Point(8, 151);
+            this.cbSHA512.Location = new System.Drawing.Point(8, 149);
             this.cbSHA512.Name = "cbSHA512";
             this.cbSHA512.Size = new System.Drawing.Size(66, 17);
             this.cbSHA512.TabIndex = 7;
             this.cbSHA512.Text = "SHA512";
             this.cbSHA512.UseVisualStyleBackColor = true;
-            this.cbSHA512.CheckedChanged += new System.EventHandler(this.cbSHA512_CheckedChanged);
             // 
             // tbSHA1
             // 
@@ -272,10 +388,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbSHA1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbSHA1.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbSHA1.Location = new System.Drawing.Point(94, 96);
+            this.tbSHA1.Location = new System.Drawing.Point(106, 96);
             this.tbSHA1.Name = "tbSHA1";
             this.tbSHA1.ReadOnly = true;
-            this.tbSHA1.Size = new System.Drawing.Size(801, 20);
+            this.tbSHA1.Size = new System.Drawing.Size(789, 20);
             this.tbSHA1.TabIndex = 6;
             this.tbSHA1.TabStop = false;
             // 
@@ -285,10 +401,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbSHA256.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbSHA256.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbSHA256.Location = new System.Drawing.Point(94, 122);
+            this.tbSHA256.Location = new System.Drawing.Point(106, 122);
             this.tbSHA256.Name = "tbSHA256";
             this.tbSHA256.ReadOnly = true;
-            this.tbSHA256.Size = new System.Drawing.Size(801, 20);
+            this.tbSHA256.Size = new System.Drawing.Size(789, 20);
             this.tbSHA256.TabIndex = 8;
             this.tbSHA256.TabStop = false;
             // 
@@ -297,13 +413,12 @@
             this.cbSHA256.AutoSize = true;
             this.cbSHA256.Checked = true;
             this.cbSHA256.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbSHA256.Location = new System.Drawing.Point(8, 125);
+            this.cbSHA256.Location = new System.Drawing.Point(9, 123);
             this.cbSHA256.Name = "cbSHA256";
             this.cbSHA256.Size = new System.Drawing.Size(66, 17);
             this.cbSHA256.TabIndex = 6;
             this.cbSHA256.Text = "SHA256";
             this.cbSHA256.UseVisualStyleBackColor = true;
-            this.cbSHA256.CheckedChanged += new System.EventHandler(this.cbSHA256_CheckedChanged);
             // 
             // tabPage2
             // 
@@ -325,7 +440,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(905, 245);
+            this.tabPage2.Size = new System.Drawing.Size(905, 412);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Password Generator";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -457,11 +572,12 @@
             this.lbPasswordList.Location = new System.Drawing.Point(10, 71);
             this.lbPasswordList.Name = "lbPasswordList";
             this.lbPasswordList.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
-            this.lbPasswordList.Size = new System.Drawing.Size(887, 158);
+            this.lbPasswordList.Size = new System.Drawing.Size(887, 327);
             this.lbPasswordList.TabIndex = 3;
             // 
             // contextMenuStrip1
             // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.copyToolStripMenuItem,
             this.copyAllToolStripMenuItem1,
@@ -526,11 +642,80 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Minimum Length:";
             // 
+            // tbRipeMD320
+            // 
+            this.tbRipeMD320.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbRipeMD320.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbRipeMD320.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbRipeMD320.Location = new System.Drawing.Point(106, 278);
+            this.tbRipeMD320.Name = "tbRipeMD320";
+            this.tbRipeMD320.ReadOnly = true;
+            this.tbRipeMD320.Size = new System.Drawing.Size(789, 20);
+            this.tbRipeMD320.TabIndex = 26;
+            this.tbRipeMD320.TabStop = false;
+            // 
+            // cbRipeMD320
+            // 
+            this.cbRipeMD320.AutoSize = true;
+            this.cbRipeMD320.Location = new System.Drawing.Point(9, 279);
+            this.cbRipeMD320.Name = "cbRipeMD320";
+            this.cbRipeMD320.Size = new System.Drawing.Size(83, 17);
+            this.cbRipeMD320.TabIndex = 25;
+            this.cbRipeMD320.Text = "RipeMD320";
+            this.cbRipeMD320.UseVisualStyleBackColor = true;
+            // 
+            // tbTiger
+            // 
+            this.tbTiger.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbTiger.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbTiger.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbTiger.Location = new System.Drawing.Point(106, 304);
+            this.tbTiger.Name = "tbTiger";
+            this.tbTiger.ReadOnly = true;
+            this.tbTiger.Size = new System.Drawing.Size(789, 20);
+            this.tbTiger.TabIndex = 28;
+            this.tbTiger.TabStop = false;
+            // 
+            // cbTiger
+            // 
+            this.cbTiger.AutoSize = true;
+            this.cbTiger.Location = new System.Drawing.Point(9, 305);
+            this.cbTiger.Name = "cbTiger";
+            this.cbTiger.Size = new System.Drawing.Size(80, 17);
+            this.cbTiger.TabIndex = 27;
+            this.cbTiger.Text = "Tiger 192,3";
+            this.cbTiger.UseVisualStyleBackColor = true;
+            // 
+            // tbWhirlpool
+            // 
+            this.tbWhirlpool.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbWhirlpool.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbWhirlpool.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbWhirlpool.Location = new System.Drawing.Point(106, 330);
+            this.tbWhirlpool.Name = "tbWhirlpool";
+            this.tbWhirlpool.ReadOnly = true;
+            this.tbWhirlpool.Size = new System.Drawing.Size(789, 20);
+            this.tbWhirlpool.TabIndex = 30;
+            this.tbWhirlpool.TabStop = false;
+            // 
+            // cbWhirlpool
+            // 
+            this.cbWhirlpool.AutoSize = true;
+            this.cbWhirlpool.Location = new System.Drawing.Point(9, 331);
+            this.cbWhirlpool.Name = "cbWhirlpool";
+            this.cbWhirlpool.Size = new System.Drawing.Size(70, 17);
+            this.cbWhirlpool.TabIndex = 29;
+            this.cbWhirlpool.Text = "Whirlpool";
+            this.cbWhirlpool.UseVisualStyleBackColor = true;
+            // 
             // frMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(934, 297);
+            this.ClientSize = new System.Drawing.Size(934, 459);
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frMain";
@@ -587,6 +772,20 @@
         private System.Windows.Forms.CheckBox cbHexLower;
         private System.Windows.Forms.CheckBox cbHexUpper;
         private System.Windows.Forms.CheckBox cbAdditional;
+        private System.Windows.Forms.CheckBox cbGost;
+        private System.Windows.Forms.TextBox tbRipeMD256;
+        private System.Windows.Forms.CheckBox cbRipeMD256;
+        private System.Windows.Forms.TextBox tbRipeMD160;
+        private System.Windows.Forms.CheckBox cbRipeMD160;
+        private System.Windows.Forms.TextBox tbRipeMD128;
+        private System.Windows.Forms.CheckBox cbRipeMD128;
+        private System.Windows.Forms.TextBox tbGost;
+        private System.Windows.Forms.TextBox tbRipeMD320;
+        private System.Windows.Forms.CheckBox cbRipeMD320;
+        private System.Windows.Forms.TextBox tbTiger;
+        private System.Windows.Forms.CheckBox cbTiger;
+        private System.Windows.Forms.TextBox tbWhirlpool;
+        private System.Windows.Forms.CheckBox cbWhirlpool;
     }
 }
 

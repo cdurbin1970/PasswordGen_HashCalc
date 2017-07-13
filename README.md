@@ -18,5 +18,9 @@ sets do not include the characters I,O,1 or 0 to avoid cunfusion. Add those
 characters in by using the Additional set. 
 
 It can also compute hashes for both files and text. It can compute MD5, SHA1,
-SHA256 and SHA512. If you paste a hash into compare box, it will compare it
-against the generated hashes to see if there is a match. 
+SHA256, SHA512, Gost, RipeMD128, RipeMD160, RipeMD256, RipeMD320, Tiger and Whirlpool. 
+If you paste a hash into compare box, it will compare it against the generated hashes to 
+see if there is a match. 
+
+This uses the MS hash functions for MD5 and SHAx generation. The MS functions are MUCH
+faster than the Bouncy Castle algorithms on large files.
