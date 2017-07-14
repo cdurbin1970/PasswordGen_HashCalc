@@ -2,6 +2,8 @@
 Utility to generate passwords and to compute hashes on files and text.
 
 This is written in C# and .NET 4.5.2 using VS 2015
+It uses the Bouncy Castle library for certain crypto functions.
+https://www.bouncycastle.org/csharp/index.html
 
 This utility has the ability to generate variable length passwords using several different character sets:
 
