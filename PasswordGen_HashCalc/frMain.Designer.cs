@@ -32,6 +32,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frMain));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tbWhirlpool = new System.Windows.Forms.TextBox();
+            this.cbWhirlpool = new System.Windows.Forms.CheckBox();
+            this.tbTiger = new System.Windows.Forms.TextBox();
+            this.cbTiger = new System.Windows.Forms.CheckBox();
+            this.tbRipeMD320 = new System.Windows.Forms.TextBox();
+            this.cbRipeMD320 = new System.Windows.Forms.CheckBox();
             this.tbRipeMD256 = new System.Windows.Forms.TextBox();
             this.cbRipeMD256 = new System.Windows.Forms.CheckBox();
             this.tbRipeMD160 = new System.Windows.Forms.TextBox();
@@ -78,12 +84,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.tbRipeMD320 = new System.Windows.Forms.TextBox();
-            this.cbRipeMD320 = new System.Windows.Forms.CheckBox();
-            this.tbTiger = new System.Windows.Forms.TextBox();
-            this.cbTiger = new System.Windows.Forms.CheckBox();
-            this.tbWhirlpool = new System.Windows.Forms.TextBox();
-            this.cbWhirlpool = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -143,6 +143,78 @@
             this.tabPage1.Text = "Text & File Hash";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // tbWhirlpool
+            // 
+            this.tbWhirlpool.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbWhirlpool.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbWhirlpool.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbWhirlpool.Location = new System.Drawing.Point(106, 330);
+            this.tbWhirlpool.Name = "tbWhirlpool";
+            this.tbWhirlpool.ReadOnly = true;
+            this.tbWhirlpool.Size = new System.Drawing.Size(789, 20);
+            this.tbWhirlpool.TabIndex = 30;
+            this.tbWhirlpool.TabStop = false;
+            // 
+            // cbWhirlpool
+            // 
+            this.cbWhirlpool.AutoSize = true;
+            this.cbWhirlpool.Location = new System.Drawing.Point(9, 331);
+            this.cbWhirlpool.Name = "cbWhirlpool";
+            this.cbWhirlpool.Size = new System.Drawing.Size(70, 17);
+            this.cbWhirlpool.TabIndex = 29;
+            this.cbWhirlpool.Text = "Whirlpool";
+            this.toolTip.SetToolTip(this.cbWhirlpool, "Uses Bouncy Castle and is MUCH slower on large files.");
+            this.cbWhirlpool.UseVisualStyleBackColor = true;
+            // 
+            // tbTiger
+            // 
+            this.tbTiger.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbTiger.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbTiger.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbTiger.Location = new System.Drawing.Point(106, 304);
+            this.tbTiger.Name = "tbTiger";
+            this.tbTiger.ReadOnly = true;
+            this.tbTiger.Size = new System.Drawing.Size(789, 20);
+            this.tbTiger.TabIndex = 28;
+            this.tbTiger.TabStop = false;
+            // 
+            // cbTiger
+            // 
+            this.cbTiger.AutoSize = true;
+            this.cbTiger.Location = new System.Drawing.Point(9, 305);
+            this.cbTiger.Name = "cbTiger";
+            this.cbTiger.Size = new System.Drawing.Size(80, 17);
+            this.cbTiger.TabIndex = 27;
+            this.cbTiger.Text = "Tiger 192,3";
+            this.toolTip.SetToolTip(this.cbTiger, "Uses Bouncy Castle and is MUCH slower on large files.");
+            this.cbTiger.UseVisualStyleBackColor = true;
+            // 
+            // tbRipeMD320
+            // 
+            this.tbRipeMD320.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbRipeMD320.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbRipeMD320.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbRipeMD320.Location = new System.Drawing.Point(106, 278);
+            this.tbRipeMD320.Name = "tbRipeMD320";
+            this.tbRipeMD320.ReadOnly = true;
+            this.tbRipeMD320.Size = new System.Drawing.Size(789, 20);
+            this.tbRipeMD320.TabIndex = 26;
+            this.tbRipeMD320.TabStop = false;
+            // 
+            // cbRipeMD320
+            // 
+            this.cbRipeMD320.AutoSize = true;
+            this.cbRipeMD320.Location = new System.Drawing.Point(9, 279);
+            this.cbRipeMD320.Name = "cbRipeMD320";
+            this.cbRipeMD320.Size = new System.Drawing.Size(83, 17);
+            this.cbRipeMD320.TabIndex = 25;
+            this.cbRipeMD320.Text = "RipeMD320";
+            this.toolTip.SetToolTip(this.cbRipeMD320, "Uses Bouncy Castle and is MUCH slower on large files.");
+            this.cbRipeMD320.UseVisualStyleBackColor = true;
+            // 
             // tbRipeMD256
             // 
             this.tbRipeMD256.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -164,6 +236,7 @@
             this.cbRipeMD256.Size = new System.Drawing.Size(83, 17);
             this.cbRipeMD256.TabIndex = 23;
             this.cbRipeMD256.Text = "RipeMD256";
+            this.toolTip.SetToolTip(this.cbRipeMD256, "Uses Bouncy Castle and is MUCH slower on large files.");
             this.cbRipeMD256.UseVisualStyleBackColor = true;
             // 
             // tbRipeMD160
@@ -187,6 +260,7 @@
             this.cbRipeMD160.Size = new System.Drawing.Size(83, 17);
             this.cbRipeMD160.TabIndex = 21;
             this.cbRipeMD160.Text = "RipeMD160";
+            this.toolTip.SetToolTip(this.cbRipeMD160, "Uses Bouncy Castle and is MUCH slower on large files.");
             this.cbRipeMD160.UseVisualStyleBackColor = true;
             // 
             // tbRipeMD128
@@ -210,6 +284,7 @@
             this.cbRipeMD128.Size = new System.Drawing.Size(83, 17);
             this.cbRipeMD128.TabIndex = 19;
             this.cbRipeMD128.Text = "RipeMD128";
+            this.toolTip.SetToolTip(this.cbRipeMD128, "Uses Bouncy Castle and is MUCH slower on large files.");
             this.cbRipeMD128.UseVisualStyleBackColor = true;
             // 
             // tbGost
@@ -233,6 +308,7 @@
             this.cbGost.Size = new System.Drawing.Size(75, 17);
             this.cbGost.TabIndex = 17;
             this.cbGost.Text = "Gost 3411";
+            this.toolTip.SetToolTip(this.cbGost, "Uses Bouncy Castle and is MUCH slower on large files.");
             this.cbGost.UseVisualStyleBackColor = true;
             // 
             // label4
@@ -254,6 +330,7 @@
             this.tbText.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tbText.Size = new System.Drawing.Size(759, 20);
             this.tbText.TabIndex = 0;
+            this.toolTip.SetToolTip(this.tbText, "Type text here to compute hash.");
             this.tbText.TextChanged += new System.EventHandler(this.tbText_TextChanged);
             // 
             // tbPath
@@ -265,6 +342,7 @@
             this.tbPath.Name = "tbPath";
             this.tbPath.Size = new System.Drawing.Size(759, 20);
             this.tbPath.TabIndex = 1;
+            this.toolTip.SetToolTip(this.tbPath, "Name of file to compute hash for.");
             this.tbPath.TextChanged += new System.EventHandler(this.tbPath_TextChanged);
             // 
             // label1
@@ -272,9 +350,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(5, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 13);
+            this.label1.Size = new System.Drawing.Size(51, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Path:";
+            this.label1.Text = "File Path:";
             // 
             // buCalculate
             // 
@@ -284,6 +362,7 @@
             this.buCalculate.Name = "buCalculate";
             this.buCalculate.Size = new System.Drawing.Size(24, 23);
             this.buCalculate.TabIndex = 3;
+            this.toolTip.SetToolTip(this.buCalculate, "Compute selected hash");
             this.buCalculate.UseVisualStyleBackColor = true;
             this.buCalculate.Click += new System.EventHandler(this.buCalculate_Click);
             // 
@@ -295,6 +374,7 @@
             this.buBrowsePath.Name = "buBrowsePath";
             this.buBrowsePath.Size = new System.Drawing.Size(24, 23);
             this.buBrowsePath.TabIndex = 2;
+            this.toolTip.SetToolTip(this.buBrowsePath, "Browse for a file");
             this.buBrowsePath.UseVisualStyleBackColor = true;
             this.buBrowsePath.Click += new System.EventHandler(this.buBrowsePath_Click);
             // 
@@ -305,9 +385,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(6, 360);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(264, 13);
+            this.label2.Size = new System.Drawing.Size(80, 13);
             this.label2.TabIndex = 12;
-            this.label2.Text = "Paste an hash here to compare with the above results:";
+            this.label2.Text = "Hash Compare:";
             // 
             // cbMD5
             // 
@@ -331,6 +411,7 @@
             this.tbCheck.Name = "tbCheck";
             this.tbCheck.Size = new System.Drawing.Size(887, 20);
             this.tbCheck.TabIndex = 8;
+            this.toolTip.SetToolTip(this.tbCheck, "Paste a hash here to compare with the above results");
             // 
             // tbMD5
             // 
@@ -440,7 +521,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(905, 412);
+            this.tabPage2.Size = new System.Drawing.Size(905, 407);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Password Generator";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -453,6 +534,7 @@
             this.cbAdditional.Size = new System.Drawing.Size(72, 17);
             this.cbAdditional.TabIndex = 14;
             this.cbAdditional.Text = "Additional";
+            this.toolTip.SetToolTip(this.cbAdditional, "Adds 1,0,I,O to the character sets");
             this.cbAdditional.UseVisualStyleBackColor = true;
             // 
             // cbHexLower
@@ -534,6 +616,7 @@
             this.buGenerate.Name = "buGenerate";
             this.buGenerate.Size = new System.Drawing.Size(24, 23);
             this.buGenerate.TabIndex = 7;
+            this.toolTip.SetToolTip(this.buGenerate, "Create Passwords");
             this.buGenerate.UseVisualStyleBackColor = true;
             this.buGenerate.Click += new System.EventHandler(this.buGeneratePasswords_Click);
             // 
@@ -641,75 +724,6 @@
             this.label3.Size = new System.Drawing.Size(87, 13);
             this.label3.TabIndex = 0;
             this.label3.Text = "Minimum Length:";
-            // 
-            // tbRipeMD320
-            // 
-            this.tbRipeMD320.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbRipeMD320.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbRipeMD320.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbRipeMD320.Location = new System.Drawing.Point(106, 278);
-            this.tbRipeMD320.Name = "tbRipeMD320";
-            this.tbRipeMD320.ReadOnly = true;
-            this.tbRipeMD320.Size = new System.Drawing.Size(789, 20);
-            this.tbRipeMD320.TabIndex = 26;
-            this.tbRipeMD320.TabStop = false;
-            // 
-            // cbRipeMD320
-            // 
-            this.cbRipeMD320.AutoSize = true;
-            this.cbRipeMD320.Location = new System.Drawing.Point(9, 279);
-            this.cbRipeMD320.Name = "cbRipeMD320";
-            this.cbRipeMD320.Size = new System.Drawing.Size(83, 17);
-            this.cbRipeMD320.TabIndex = 25;
-            this.cbRipeMD320.Text = "RipeMD320";
-            this.cbRipeMD320.UseVisualStyleBackColor = true;
-            // 
-            // tbTiger
-            // 
-            this.tbTiger.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbTiger.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbTiger.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbTiger.Location = new System.Drawing.Point(106, 304);
-            this.tbTiger.Name = "tbTiger";
-            this.tbTiger.ReadOnly = true;
-            this.tbTiger.Size = new System.Drawing.Size(789, 20);
-            this.tbTiger.TabIndex = 28;
-            this.tbTiger.TabStop = false;
-            // 
-            // cbTiger
-            // 
-            this.cbTiger.AutoSize = true;
-            this.cbTiger.Location = new System.Drawing.Point(9, 305);
-            this.cbTiger.Name = "cbTiger";
-            this.cbTiger.Size = new System.Drawing.Size(80, 17);
-            this.cbTiger.TabIndex = 27;
-            this.cbTiger.Text = "Tiger 192,3";
-            this.cbTiger.UseVisualStyleBackColor = true;
-            // 
-            // tbWhirlpool
-            // 
-            this.tbWhirlpool.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbWhirlpool.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbWhirlpool.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbWhirlpool.Location = new System.Drawing.Point(106, 330);
-            this.tbWhirlpool.Name = "tbWhirlpool";
-            this.tbWhirlpool.ReadOnly = true;
-            this.tbWhirlpool.Size = new System.Drawing.Size(789, 20);
-            this.tbWhirlpool.TabIndex = 30;
-            this.tbWhirlpool.TabStop = false;
-            // 
-            // cbWhirlpool
-            // 
-            this.cbWhirlpool.AutoSize = true;
-            this.cbWhirlpool.Location = new System.Drawing.Point(9, 331);
-            this.cbWhirlpool.Name = "cbWhirlpool";
-            this.cbWhirlpool.Size = new System.Drawing.Size(70, 17);
-            this.cbWhirlpool.TabIndex = 29;
-            this.cbWhirlpool.Text = "Whirlpool";
-            this.cbWhirlpool.UseVisualStyleBackColor = true;
             // 
             // frMain
             // 
