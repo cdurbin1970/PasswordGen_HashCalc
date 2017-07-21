@@ -1,13 +1,15 @@
 # PasswordGen_HashCalc
-Utility to generate passwords and to compute hashes on files and text.
-
-This is written in C# and .NET 4.5.2 using VS 2015
-It uses the Bouncy Castle library for certain crypto functions.
-https://www.bouncycastle.org/csharp/index.html
-http://www.bouncycastle.org/license.html
-
-This utility has the ability to generate variable length passwords using several different character sets:
-
+Utility to generate passwords and to compute hashes on files and text.<br/>
+<br/>
+This is written in C# and .NET 4.5.2 using VS 2015<br/>
+It uses the Bouncy Castle library for certain crypto functions.<br/>
+https://www.bouncycastle.org/csharp/index.html<br/>
+http://www.bouncycastle.org/license.html<br/>
+<br/>
+This works under Linux using mono. Tested on Fedora 26.<br/>
+<br/>
+This utility has the ability to generate variable length passwords using several different character sets:<br/>
+<br/>
 PASSWORD_LCASE "abcdefgijkmnopqrstwxyz"<br/>
 PASSWORD_UCASE "ABCDEFGHJKLMNPQRSTWXYZ"<br/>
 PASSWORD_NUMERIC "23456789"<br/>
