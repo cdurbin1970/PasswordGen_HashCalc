@@ -63,6 +63,7 @@
             this.tbSHA256 = new System.Windows.Forms.TextBox();
             this.cbSHA256 = new System.Windows.Forms.CheckBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.cbXKCD = new System.Windows.Forms.CheckBox();
             this.cbAdditional = new System.Windows.Forms.CheckBox();
             this.cbHexLower = new System.Windows.Forms.CheckBox();
             this.cbHexUpper = new System.Windows.Forms.CheckBox();
@@ -503,6 +504,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.cbXKCD);
             this.tabPage2.Controls.Add(this.cbAdditional);
             this.tabPage2.Controls.Add(this.cbHexLower);
             this.tabPage2.Controls.Add(this.cbHexUpper);
@@ -525,6 +527,18 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Password Generator";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // cbXKCD
+            // 
+            this.cbXKCD.AutoSize = true;
+            this.cbXKCD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbXKCD.Location = new System.Drawing.Point(375, 54);
+            this.cbXKCD.Name = "cbXKCD";
+            this.cbXKCD.Size = new System.Drawing.Size(104, 17);
+            this.cbXKCD.TabIndex = 15;
+            this.cbXKCD.Text = "xkcd Passphrase";
+            this.toolTip.SetToolTip(this.cbXKCD, "Creates a word based passphrase");
+            this.cbXKCD.UseVisualStyleBackColor = true;
             // 
             // cbAdditional
             // 
@@ -652,10 +666,10 @@
             this.lbPasswordList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lbPasswordList.ContextMenuStrip = this.contextMenuStrip1;
             this.lbPasswordList.FormattingEnabled = true;
-            this.lbPasswordList.Location = new System.Drawing.Point(10, 71);
+            this.lbPasswordList.Location = new System.Drawing.Point(10, 97);
             this.lbPasswordList.Name = "lbPasswordList";
             this.lbPasswordList.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
-            this.lbPasswordList.Size = new System.Drawing.Size(887, 327);
+            this.lbPasswordList.Size = new System.Drawing.Size(887, 301);
             this.lbPasswordList.TabIndex = 3;
             // 
             // contextMenuStrip1
@@ -734,6 +748,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frMain";
             this.Text = "Password Generator & Hash Calulator v0.1";
+            this.Load += new System.EventHandler(this.frMain_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -800,6 +815,7 @@
         private System.Windows.Forms.CheckBox cbTiger;
         private System.Windows.Forms.TextBox tbWhirlpool;
         private System.Windows.Forms.CheckBox cbWhirlpool;
+        private System.Windows.Forms.CheckBox cbXKCD;
     }
 }
 

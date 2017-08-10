@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.IO;
+using System.Collections.Generic;
 using System.Text;
 using System.Security.Cryptography;
 using System.Windows.Forms;
@@ -21,6 +22,12 @@ namespace PasswordGen_HashCalc {
 
         public frMain() {
             InitializeComponent();
+        }
+
+        private void frMain_Load(object sender, EventArgs e) {
+            var objFileInfo = new FileInfo(Application.ExecutablePath);
+            var dtCreationDate = objFileInfo.LastWriteTime;
+            Text = Application.ProductName + " v" + Application.ProductVersion + " Build: " + dtCreationDate.ToString("MMddyy");
         }
 
         private void buBrowsePath_Click(object sender, EventArgs e) {
@@ -314,6 +321,30 @@ namespace PasswordGen_HashCalc {
         // Password Tab functions
 
         private void buGeneratePasswords_Click(object sender, EventArgs e) {
+            if (cbXKCD.Checked) {
+                lbPasswordList.Items.Clear();
+                // Load the word list.
+                List<string> wordslist = new List<string>();
+                try {
+                    using (StreamReader r = new StreamReader("words.txt")) {
+                        string line = "";
+                        while ((line = r.ReadLine()) != null) {
+                            if (line.Length > 2) {
+                                wordslist.Add(line);
+                            }
+                        }
+                    }
+                }
+                catch (Exception) {
+                    MessageBox.Show("Unable to load the word list file. I cannot create a passphrase without it.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                for (int i = 0; i < Convert.ToInt16(tbNumberofPasswords.Text); i++) {
+                    lbPasswordList.Items.Add(generateXKCDPassword(Convert.ToInt16(tbMinimumLength.Text),Convert.ToInt16(tbMaximumLength.Text),wordslist)); 
+                }
+                return;
+            }
+
             if (!cbUpper.Checked && !cbLower.Checked && !cbNumeric.Checked && !cbSpecial.Checked && !cbAdditional.Checked && !cbHexUpper.Checked && !cbHexLower.Checked) {
                 MessageBox.Show("You must include one of the character sets!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -457,5 +488,29 @@ namespace PasswordGen_HashCalc {
             return new string(password);
         }
 
+        public static string generateXKCDPassword(int minLength, int maxLength, List<string> wordslist) {
+            // Make sure that input parameters are valid.
+            if (minLength <= 0 || maxLength <= 0 || minLength > maxLength) {
+                return null;
+            }
+            byte[] randomBytes = new byte[4];
+            RNGCryptoServiceProvider rng = new RNGCryptoServiceProvider();
+            rng.GetBytes(randomBytes);
+            int seed = BitConverter.ToInt32(randomBytes, 0);
+            Random random = new Random(seed);
+            // How many words do we select
+            int numWords = random.Next(minLength, maxLength+1);
+
+            string password = String.Empty;
+            int wordToUse = 0;
+            for (int x = 0; x < numWords; x++) {
+                wordToUse = random.Next(wordslist.Count);
+                password = password + wordslist[wordToUse];
+                if (x != numWords) {
+                    password = password + " ";
+                }
+            }
+            return(password);
+        }
     }
 }

@@ -20,7 +20,10 @@ PASSWORD_HEX_UCASE "ABCDEF0123456789"<br/>
 <br/>
 You can use individual groups or mix and match to suit your needs. The regular
 sets do not include the characters I,O,1 or 0 to avoid cunfusion. Add those 
-characters in by using the Additional set. 
+characters in by using the Additional set.
+
+You can also generate xkcd (https://xkcd.com/936/) passphrases of variable length. It selects from a list of 109583
+English words to create your passphrase. You can add additional words to the list with any text editor.
 
 It can also compute hashes for both files and text. It can compute MD5, SHA1,
 SHA256, SHA512, Gost, RipeMD128, RipeMD160, RipeMD256, RipeMD320, Tiger and Whirlpool. 
